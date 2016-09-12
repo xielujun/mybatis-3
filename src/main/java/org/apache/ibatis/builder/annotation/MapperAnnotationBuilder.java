@@ -92,6 +92,26 @@ import org.apache.ibatis.type.UnknownTypeHandler;
 public class MapperAnnotationBuilder {
 
   private final Set<Class<? extends Annotation>> sqlAnnotationTypes = new HashSet<Class<? extends Annotation>>();
+  /***
+   * Class<? extends Annotation>这个是取反射的如
+   * public boolean isAnnotationPresent(Class <? extends Annotation> annotationClass
+   * 调用就是
+   public class Main{
+   public static void main(String[] unused) {
+   try {
+   String n = "java.lang.Deprecated";
+   Class c = Class.forName(n);
+   Class d = Class.forName("java.util.Date");
+   System.out.println(d.isAnnotationPresent(c));
+   } catch (Exception ex) {
+   ex.printStackTrace();
+   }
+   }
+   }
+   *
+   *
+   *
+   */
   private final Set<Class<? extends Annotation>> sqlProviderAnnotationTypes = new HashSet<Class<? extends Annotation>>();
 
   private Configuration configuration;
