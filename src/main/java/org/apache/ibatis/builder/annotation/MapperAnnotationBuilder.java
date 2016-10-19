@@ -97,19 +97,19 @@ public class MapperAnnotationBuilder {
    * public boolean isAnnotationPresent(Class <? extends Annotation> annotationClass
    * 调用就是
    public class Main{
-   public static void main(String[] unused) {
-   try {
-   String n = "java.lang.Deprecated";
-   Class c = Class.forName(n);
-   Class d = Class.forName("java.util.Date");
-   System.out.println(d.isAnnotationPresent(c));
-   } catch (Exception ex) {
-   ex.printStackTrace();
-   }
-   }
+       public static void main(String[] unused) {
+           try {
+                 String n = "java.lang.Deprecated";
+                 Class c = Class.forName(n);
+                 Class d = Class.forName("java.util.Date");
+                 System.out.println(d.isAnnotationPresent(c));
+              } catch (Exception ex) {
+                 ex.printStackTrace();
+              }
+       }
    }
    *
-   *
+   *用@interface定义的类都是Annotation的子类
    *
    */
   private final Set<Class<? extends Annotation>> sqlProviderAnnotationTypes = new HashSet<Class<? extends Annotation>>();
