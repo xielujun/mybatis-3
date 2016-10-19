@@ -51,6 +51,11 @@ public final class Environment {
       this.id = id;
     }
 
+    /***
+     * 思考这里为什么要用this返回当前对象的引用呢？
+     * @param transactionFactory
+     * @return
+       */
     public Builder transactionFactory(TransactionFactory transactionFactory) {
       this.transactionFactory = transactionFactory;
       return this;
