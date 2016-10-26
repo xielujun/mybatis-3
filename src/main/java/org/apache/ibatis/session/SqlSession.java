@@ -30,6 +30,9 @@ import org.apache.ibatis.executor.BatchResult;
  * @author Clinton Begin
  */
 public interface SqlSession extends Closeable {
+  /**
+   * 接口之间也可以用继承来表示
+   */
 
   /**
    * Retrieve a single row mapped from the statement key
