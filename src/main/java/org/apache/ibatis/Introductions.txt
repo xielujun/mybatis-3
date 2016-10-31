@@ -1,0 +1,5 @@
+接口层 session
+核心层 builder | mapping cache transaction , scripting executor datasource , parsing plugIn binding |annotation   jdbc
+基础层  logging io reflection exceptions type
+
+cursor 没有被分配
