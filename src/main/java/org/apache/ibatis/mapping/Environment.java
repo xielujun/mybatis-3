@@ -53,10 +53,14 @@ public final class Environment {
 
     /***
      * 思考这里为什么要用this返回当前对象的引用呢？
+     * 这样就可以这样初始化了，但是这样初始化也看不出多好
+     * Environment.Builder environmentBuilder = new Environment.Builder(id)
+     .transactionFactory(txFactory)
+     .dataSource(dataSource)
      * @param transactionFactory
      * @return
        */
-    public Builder transactionFactory(TransactionFactory transactionFactory) {
+    public Builder transactionFactory(TransactionFactory transactionFactory){
       this.transactionFactory = transactionFactory;
       return this;
     }
