@@ -29,6 +29,12 @@ import org.apache.ibatis.reflection.ExceptionUtil;
  * @author Clinton Begin
  */
 public class Plugin implements InvocationHandler {
+/***
+ *Class<T>在实例化的时候，T要替换成具体类
+ *Class<?>它是个通配泛型，?可以代表任何类型
+ * <? extends T>受限统配，表示T的一个未知子类。
+ *<? super T>下限统配，表示T的一个未知父类。
+ */
 
   private Object target;
   private Interceptor interceptor;
